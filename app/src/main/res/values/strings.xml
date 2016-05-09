@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ReadToMe</string>
+    <string name="input_text_to_speak">input text to speak</string>
+    <string name="speak_btn_title">speak</string>
+</resources>
