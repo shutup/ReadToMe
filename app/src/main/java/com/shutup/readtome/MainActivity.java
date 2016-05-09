@@ -13,7 +13,7 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
 
-public class MainActivity extends AppCompatActivity implements TextToSpeech.OnInitListener {
+public class MainActivity extends BaseActivity implements TextToSpeech.OnInitListener {
 
     @InjectView(R.id.speakBtn)
     Button mSpeakBtn;
@@ -27,7 +27,8 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
         setContentView(R.layout.activity_main);
         ButterKnife.inject(this);
         textToSpeech = new TextToSpeech(this, this);
-        textToSpeech.speak("此处无声", TextToSpeech.QUEUE_ADD, null);
+        //because it needs time to init ,so the speak call below is failed!
+//        textToSpeech.speak("此处无声", TextToSpeech.QUEUE_ADD, null);
     }
 
     @Override
